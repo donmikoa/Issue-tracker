@@ -29,24 +29,30 @@
 						/>
 					</div>
 					<div class="form-group">
-						<label for="issueDescInput">Description</label>
-						<input
-							type="text"
-							class="form-control"
-							id="issueDescInput"
-							placeholder="Describe the issue ..."
-						/>
+						<label for="issueSeverityInput">Severity</label>
+						<select id="issueSeverityInput" class="form-control">
+							<option value="Low">Low</option>
+							<option value="Low">Medium</option>
+							<option value="Low">High</option>
+						</select>
 					</div>
 					<div class="form-group">
-						<label for="issueDescInput">Description</label>
+						<label for="issueAssignedInput">Assigned</label>
 						<input
 							type="text"
 							class="form-control"
-							id="issueDescInput"
-							placeholder="Describe the issue ..."
+							id="issueAssignedInput"
+							placeholder="Enter the person responsible ..."
 						/>
 					</div>
+					<button type="submit" class="btn btn-primary">Add</button>
 				</form>
+			</div>
+			<div class="col-lg-12">
+				<div id="issueList"></div>
+			</div>
+			<div class="footer">
+				<p>&copy Techont.com</p>
 			</div>
 		</div>
 
