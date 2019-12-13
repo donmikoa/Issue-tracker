@@ -1,8 +1,8 @@
 function fetchIssues() {
-	var issues = JSON.parse(localStorage.getItem("issues"));
-	var issuesList = document.getElementById("issuesList");
+	var issues = JSON.parse(localStorage.getItem('issues'));
+	var issuesList = document.getElementById('issuesList');
 
-	issuesList.innerHTML = "";
+	issuesList.innerHTML = '';
 
 	for (var i = 0; i < issues.length; i++) {
 		var id = issues[i].id;
@@ -13,7 +13,10 @@ function fetchIssues() {
 
         issuesList.innerHTML += '<div class="well">' +
                                 '<h6> Issue ID: ' + id + '</h6>' +
-                                '<p><span class = "label label-info">' + status
+                                '<p><span class = "label label-info">' + status + '</span></p>'
+                                '<h3>' + desc + '</h3>'
+
 
 	}
 }
+
