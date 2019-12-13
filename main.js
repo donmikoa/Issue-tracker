@@ -1,3 +1,27 @@
+document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
+
+function saveIssue(e){
+    var issueDesc = document.getElementById('issueDescInput').value;
+    var issueSeverity = document.getElementById('issueSeverityInput').value;
+    var issueAssignedTo = document.getElementById('issueAssignedInput').value;
+    var issueId = chance.guid();
+    var issueStatus = 'Open';
+
+    var issue = {
+        id: issueId,
+        description: issueSeverity,
+        assignedTo: issueAssignedTo,
+        status: issueStatus
+    }
+    if (localStorage.getItem('issues') == null){
+        var issues = [];
+        issues.push(issue);
+        localStorage.setItem('issues', JSON.stringify(issues))
+    } else {
+        
+    }
+}
+
 function fetchIssues() {
 	var issues = JSON.parse(localStorage.getItem('issues'));
 	var issuesList = document.getElementById('issuesList');
@@ -17,8 +41,9 @@ function fetchIssues() {
                                 '<h3>' + desc + '</h3>' +
                                 '<p><span class= "glyphicon glyphicon-time"></span>' + severity + '</p>' +
                                 '<p><span class= "glyphicon glyphicon-user"></span>' + assignedTo + '</p>' +
-                                '<a href="btn btn-warning">Close</a>' + 
-                                '<a href="btn btn-danger">Delete</a>'
+                                '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="btn btn-warning">Close</a>' + 
+                                '<a href="#" onclick="deleteIssue(\''+id+'\')" class="btn btn-danger">Delete</a>' +
+                                '</div>';
 
 
 	}
