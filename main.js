@@ -14,7 +14,11 @@ function fetchIssues() {
         issuesList.innerHTML += '<div class="well">' +
                                 '<h6> Issue ID: ' + id + '</h6>' +
                                 '<p><span class = "label label-info">' + status + '</span></p>'
-                                '<h3>' + desc + '</h3>'
+                                '<h3>' + desc + '</h3>' +
+                                '<p><span class= "glyphicon glyphicon-time"></span>' + severity + '</p>' +
+                                '<p><span class= "glyphicon glyphicon-user"></span>' + assignedTo + '</p>' +
+                                '<a href="btn btn-warning">Close</a>' + 
+                                '<a href="btn btn-danger">Delete</a>'
 
 
 	}
