@@ -18,9 +18,9 @@ function saveIssue(e){
         issues.push(issue);
         localStorage.setItem('issues', JSON.stringify(issues))
     } else {
-        
+
     }
-}
+}  
 
 function fetchIssues() {
 	var issues = JSON.parse(localStorage.getItem('issues'));
