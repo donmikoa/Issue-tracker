@@ -13,7 +13,7 @@ function saveIssue(e) {
     severity: issueSeverity,
     assignedTo: issueAssignedTo,
     status: issueStatus
-  }
+  } 
 
   if (localStorage.getItem('issues') == null) {
     var issues = [];
